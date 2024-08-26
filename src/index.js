@@ -11,6 +11,7 @@ const app = express();
 app.use(middlewareLogRequest);
 // mengizinkan semua request json
 app.use(express.json());
+app.use('/assets', express.static('public/images'))
 
 // semua path users yang sudah dibuat akan masuk di sini
 app.use("/users", usersRoutes);
